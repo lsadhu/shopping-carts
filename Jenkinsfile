@@ -12,19 +12,19 @@ pipeline{
         stage('compile-app'){
             steps{
                 echo 'this is the compile-app job'
-                sh 'mvm compile'
+                sh 'mvn compile'
             }
         }
         stage('test-app'){
             steps{
                 echo 'this is the test-app job'
-                sh 'mvm test'
+                sh 'mvn test'
             }
         }
         stage('package-app'){
             steps{
                 echo 'this is the package-app job'
-                sh 'mvm package'
+                sh 'mvn package'
             }
         }
     }
